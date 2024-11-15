@@ -1,0 +1,26 @@
+@import 'variables';
+@import "mixins";
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: $nav-background;
+}
+
+.nav-link {
+  color: $text-color;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  @include transition(background-color 0.3s);
+}
+
+.nav-link:hover {
+  background-color: $nav-hover;
+}
+
+.active {
+  background-color: $active-color;
+  font-weight: bold;
+}
